@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savor Haven Page</title>
+
+  <link rel="stylesheet" href="style.css">
+  <head>
+    <script>
+    
+    let menu = document.querySelector('#menu-icon');
+  let navbar = document.querySelector('.navbar');
+
+  menu.onclick = () => {
+      navbar.classList.toggle('active');
+  }
+
+  window.onscroll = () => {
+      navbar.classList.remove('active');
+  }
+  
+  let darkmode = document.querySelector('#darkmode');
+
+  darkmode.onclick = () => {
+      if(darkmode.classList.contains('bx-moon')){
+          darkmode.classList.replace('bx-moon','bx-sun');
+          document.body.classList.add('active');
+      }else{
+          darkmode.classList.replace('bx-sun','bx-moon');
+          document.body.classList.remove('active');
+      }
+  }
+
+
+  const sr = ScrollReveal ({
+      origin: 'top',
+      distance: '40px',
+      duration: 2000,
+      reset: true
+  });
+
+
+  sr.reveal(`.home-text, .home-img,
+              .about-img, .about-text,
+              .box, .s-box,
+              .btn, .connect-text,
+              .contact-box`, {
+      interval: 200
+  })
+    </script> 
+  <header>
+    <a href="#" class="logo">Savor Haven</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+        
+            <div class="bx bx-moon" id="darkmode"></div>
+        
+    </ul>
+</header>
+  <section class="home" id="home">
+    <div class="home-text">
+        <h1>Delicious Food</h1>
+        <h2>The best Burger of<br> your choice</h2>
+        <a href="getburger.html" class="btn">view Menu </a>
+        </div>
+
+    <div class="home-img">
+            <img src="kk-removebg-preview (1).png" height="10%" alt="" >
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="photo_2024-04-28_17-21-23-removebg-preview.png">
+        </div>
+        <div class="about-text">
+            <span>About Us</span>
+            <h2>We make good and <br> tasty Burgers</h2>
+            <p>Welcome to Savor Restaurant , where every bite tells a story! Sink your teeth into our mouthwatering burgers crafted with love and care.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+
+   <section class="menu" id="menu">
+    <div class="heading">
+        <p class="minititle"><span>Menu </p></span>
+    
+        <p class="title"><h2>Tasty menu of the week</p></h2>
+        <br>
+    </div>
+    <div class="menu-container">
+        <!-- Box 1 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="basic.jpg" alt=" " width="300px">
+                
+            </div>
+            <br>
+            <h2>Basic Burger</h2>
+            <h3> Slides of row onion,lettuce,meat and mayonnaise</h3>
+            <span>$14.99</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="mushr.jpg" alt="" width="300px">
+            
+            </div>
+            <br>
+
+            <h2>Mushroom Burger</h2>
+        
+            <h3>Juicy beef patty topped with savory sautéed mushrooms on a toasted bun</h3>
+            <span>$27.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="tasty.jpg" alt=""width="5px" >
+            </div>
+            <br>
+            <h2>Big Tasty</h2>
+            <h3>Beef patty, crisp lettuce, ripe tomatoes, and tangy special sauce.</h3>
+            <span>$22.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+    </div>
+</section>
+
+<section class="menu" id="menu">
+    <div class="heading">
+      
+    <div class="menu-container">
+        <!-- Box 1 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="fishhh.jpg" alt=" "width="20%" height="20%" >
+            </div>
+            <br>
+            <h2>Fish Burger</h2>
+            <h3> fish fillet with lettuce, tomato, tartar sauce and soft sesame seed bun."</h3>
+            <span>$10.99</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="classic.jpg" alt="" width="20%" height="20%">
+            </div>
+            <br>
+            <h2>Classic Burger</h2>
+            <h3>juicy beef patty,  lettuce, tomato, onion, pickles, with special sauce.</h3>
+            <span>$20.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="hickoryyy.jpg" alt=""width="40%" height="20%" >
+            </div>
+            <br>
+            <h2>Hickory Burger</h2>
+            <h3>juicy beef patty, melted cheddar cheese,caramelized onions and barbecue sauce</h3>
+            <span>$13.99</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+    </div>
+</section>
+
+<section class="menu" id="menu">
+    <div class="heading">
+      
+    <div class="menu-container">
+        <!-- Box 1 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="onion.jpg" alt=" "width="20%" height="20%" >
+            </div>
+            <br>
+            <h2>Onion Burger</h2>
+            <h3> Classic beef burger topped with caramelized onions on a toasted bun</h3>
+            <span>$17.99</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="delux.jpg" alt="" width="20%" height="20%">
+            </div>
+            <br>
+            <h2>Chiken delux</h2>
+            <h3>Grilled chicken breastwith lettuce, tomato, and mayo on a toasted bun.</h3>
+            <span>$28.00</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="bbq.jpg" alt=""width="40%" height="20%" >
+            </div>
+            <br>
+            <h2>BBQ Chiken</h2>
+            <h3>Grilled chicken withbarbecue sauce, lettuce and pickles on a toasted bun.</h3>
+            <span>$14.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+    </div>
+</section>
+
+<section class="menu" id="menu">
+    <div class="heading">
+      
+    <div class="menu-container">
+
+        <!-- Box 1 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="tan.jpg" alt=" "width="20%" height="20%" >
+            </div>
+            <br>
+            <h2>Spicy Tandoori</h2>
+            <h3>Grilled chicken with lettuce, tomato, and mint yogurt sauce on a toasted bun. </h3>
+            <span>$12.99</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="hawaiin.jpg" alt="" width="20%" height="20%">
+            </div>
+            <br>
+            <h2>Hawaiin Burger</h2>
+            <h3>Grilled burgerwith a slice of grilled pineapple, cheese and lettuce on a toasted bun.</h3>
+            <span>$25.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="dy.jpg" alt=""width="40%" height="20%" >
+            </div>
+            <br>
+            <h2>Dynamic Burger</h2>
+            <h3>Grilled chicken breast and crispy chicken patty l with lettuce, tomato, and mayo.</h3>
+            <span>$16.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2 class="Slogan">Find Your Perfect Drink for Every Dish!</h2>
+
+<br>
+<section class="menu" id="menu">
+    <div class="heading">
+      
+    <div class="menu-container">
+
+        <!-- Box 1 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="7up.jpg" alt=" "width="20%" height="20%" >
+            </div>
+            <br>
+            <h2>7UP</h2>
+            <span>$6.99</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="pep.jpg" alt="" width="20%" height="20%">
+            </div>
+            <br>
+            <h2>Pepsi</h2>
+            
+            <span>$5.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="diet.jpg" alt=""width="40%" height="20%" >
+            </div>
+            <br>
+            <h2>Pepsi Diet</h2>
+            
+            <span>$7.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+    </div>
+
+></section>
+
+
+<section class="menu" id="menu">
+    <div class="heading">
+      
+    <div class="menu-container">
+        <!-- Box 1 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="mirinda.jpg" alt=" "width="20%" height="20%" >
+            </div>
+            <br>
+            <h2>Mirinda</h2>
+            
+            <span>$5.99</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="pepsimax.jpg" alt="" width="20%" height="20%">
+            </div>
+            <br>
+            <h2>Pepsi Max</h2>
+           
+            <span>$8.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="box">
+            <div class="box-img">
+                <img src="water.jpg" alt=""width="40%" height="20%" >
+            </div>
+            <br>
+            <h2>Water</h2>
+           
+            <span>$7.05</span>
+            <i class='bx bx-cart-alt'></i>
+        </div>
+    </div>
+
+</section>
+    <!-- <section class="connect">
+        <div class="connect-text">
+            <span>Let's Talk</span>
+            <h2>Connect now</h2>
+        </div>
+        <a href="#" class="btn">Contact Us</a>
+    </section> -->
+
+    <section class="contact" id="contact">
+        <div class="contact-box">
+            
+            <h1>SERVING MORE THAN JUST BURGERS SINCE 1980!</h1>
+        
+            <!-- <div class="container">
+               <a herf="getburger.html"><button class="button" > Get Your burger!</button></a> 
+              </div> -->
+              <div class="container">
+                <a href="getburger.html">
+                  <button class="button">Get Your burger!</button>
+                </a>
+              </div>
+              
+              
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </div>
+        <div class="contact-box">
+           
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </div>
+      
+        <div class="contact-box address">
+            
+            <i class='bx bxs-map' ><span></span></i>
+            <i class='bx bxs-phone' ><span>+961 03 456 895</span></i>
+            <i class='bx bxs-envelope' ><span>SavorHaven@gmail.com</span></i>
+        </div>
+    </section>
+
+    
+    <div class="copyright">
+        <p>© SavorHAavenSince1980.</p>
+    </div>
+
+    
+</body>
+</html>
+
+
+</head>
+<body>
